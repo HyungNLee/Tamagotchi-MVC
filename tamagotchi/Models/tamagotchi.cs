@@ -5,10 +5,10 @@ namespace Tamagotchis.Models
 {
   public class Tamagotchi
   {
-    public string name {get; set;}
-    public int hunger {get; set;}
-    public int energy {get; set;}
-    public int attention {get; set;}
+    public string Name {get; set;}
+    public int Hunger {get; set;}
+    public int Energy {get; set;}
+    public int Attention {get; set;}
     private static List<Tamagotchi> _toys = new List<Tamagotchi> {};
 
     public Tamagotchi(string name)
@@ -22,17 +22,17 @@ namespace Tamagotchis.Models
 
     public void Feed()
     {
-      hunger += 30;
+      Hunger += 30;
     }
 
     public void Rest()
     {
-      energy += 30;
+      Energy += 30;
     }
 
     public void Play()
     {
-      attention += 30;
+      Attention += 30;
     }
 
     public static List<Tamagotchi> GetAll()

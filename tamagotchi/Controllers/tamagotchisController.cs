@@ -15,7 +15,7 @@ namespace Tamagotchis.Controllers
     [HttpPost("/show")]
     public ActionResult Show()
     {
-      Tamagotchi newToy = new Tamagotchi();
+      Tamagotchi newToy = new Tamagotchi(Request.Form["new-name"]);
       List<Tamagotchi> allToys = Tamagotchi.GetAll();
       return View("Show", allToys);
     }
