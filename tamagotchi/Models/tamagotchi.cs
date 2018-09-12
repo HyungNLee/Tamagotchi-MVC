@@ -83,6 +83,7 @@ namespace Tamagotchis.Models
       if (CheckDead())
       {
         Console.WriteLine(Name + " is dead!");
+        _picURL = "https://tshirt-factory.com/images/company/432/C_Simple_Skull.jpg";
       }
     }
     public bool CheckDead()
