@@ -1,0 +1,13 @@
+<h1>Tamagotchi</h1>
+  <h1>Here are your pets</h1>
+  @foreach(var pet in Model)
+  {
+
+    <p>Name: @pet.Name</p>
+    <p>Energy: @pet.Energy</p>
+    <p>Hunger: @pet.Hunger</p>
+    <p>Attention: @pet.Attention</p>
+
+  }
+
+<a href="/add">Add a new location.</a>
