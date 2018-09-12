@@ -1,13 +1,14 @@
-<h1>Tamagotchi</h1>
-  <h1>Here are your pets</h1>
-  @foreach(var pet in Model)
-  {
+@{
+  Layout = "_Layout";
+}
 
-    <p>Name: @pet.Name</p>
-    <p>Energy: @pet.Energy</p>
-    <p>Hunger: @pet.Hunger</p>
-    <p>Attention: @pet.Attention</p>
+    <h1>Tamagotchi</h1>
+    <h1>Here are your pets</h1>
+    @foreach(var pet in Model)
+    {
 
-  }
+      <p><a href="/show/@pet.GetId()">Name: @pet.Name</a></p>
 
-<a href="/add">Add a new Tamagotchi.</a>
+    }
+
+    <a href="/add">Add a new Tamagotchi.</a>

@@ -1,0 +1,35 @@
+@{
+  Layout = "_Layout";
+}
+  <div class="jumbotron">
+    <h1>Tamagotchi</h1>
+  </div>
+    <h1>Here are your pets</h1>
+
+    <img src="@Model._picURL" alt="Picture">
+    <p>Name: @Model.Name</p>
+    <p>Energy: @Model.Energy</p>
+    <p>Hunger: @Model.Hunger</p>
+    <p>Attention: @Model.Attention</p>
+@*
+    <button id="feed" type="button">Feed</button>
+    <button id="play" type="button">Play</button>
+    <button id="sleep" type="button">Sleep</button>
+    <button id="time" type="button">Pass Time</button> *@
+
+    <form action="/show/@Model.GetId()/feed" method="post">
+      <button type="submit" value="Feed">Feed</button>
+    </form>
+
+    <form action="/show/@Model.GetId()/play" method="post">
+      <button type="submit" value="Play">Play</button>
+    </form>
+
+    <form action="/show/@Model.GetId()/rest" method="post">
+      <button type="submit" value="Sleep">Sleep</button>
+    </form>
+
+    <form action="/show/@Model.GetId()/time" method="post">
+      <button type="submit" value="Pass Time">Pass Time</button>
+    </form>
+    <a href="/show">Back to Main Page</a>
